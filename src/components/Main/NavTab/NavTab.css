@@ -1,0 +1,37 @@
+.menu {
+    background-color: #272727;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 24px 0px 24px 0px;
+    text-decoration: none;
+}
+
+.menu__link {
+    color: #fff;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    text-decoration-line: underline;
+}
+
+.menu__link:hover {
+    opacity: .7;
+}
+
+@media screen and (max-width: 767px){
+    .menu__link {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,169 @@
+.student {
+    min-height: 536px;
+    width: calc(100% - 140px);
+    margin: 0 auto;
+}
+
+.student__title {
+    padding: 110px 0px 23px 0px;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.88px;
+    border-bottom: 1px solid #DADADA;
+    margin: 0;
+}
+
+.student__info { 
+    padding-top: 66px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.student__text {
+    width: 600px;
+}
+
+.student__name {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 58px; /* 116% */
+    letter-spacing: -2px;
+    margin: 0;
+}
+
+.student__profession {
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    padding: 18px 0 26px 0;
+}
+
+.student__paragraph {
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0;
+}
+
+.student__photo {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.student__link {
+    text-decoration: none;
+    color: #fff;
+    padding-top: 99px;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.student__link:hover {
+    opacity: .7;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px){
+    .student {
+        min-height: 496px;
+        width: calc(100% - 100px);
+    }
+
+    .student__title {
+        padding: 90px 0px 23px 0px;
+    }
+
+    .student__text {
+        width: 364px;
+    }
+
+    .student__name {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.6px;
+    }
+
+    .student__profession {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        margin: 0;
+        padding: 18px 0 26px 0;
+    }
+
+    .student__paragraph {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .student__link {
+        display: flex;
+        padding-top: 76px;
+    }    
+}
+
+@media screen and (max-width: 767px){
+    .student {
+        min-height: 817px;
+        width: calc(100% - 28px);
+    }
+
+    .student__title {
+        padding: 70px 0px 28px 0px;
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }
+
+    .student__info { 
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .student__text {
+        width: 292px;
+        order: 2;
+        padding-top: 40px;
+    }
+
+    .student__image {
+        width: 292px;
+        height: 352px;
+    }
+
+    .student__name {
+        font-size: 30px;
+        line-height: normal;
+        letter-spacing: -1.2px;
+    }
+
+    .student__profession {
+        font-size: 11px;
+        line-height: 16px;
+        padding: 20px 0 20px 0;
+    }
+
+    .student__paragraph {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .student__link {
+        display: flex;
+        padding-top: 40px;
+    }
+}

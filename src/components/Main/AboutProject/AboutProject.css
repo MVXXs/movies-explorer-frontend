@@ -1,0 +1,210 @@
+.project {
+    min-height: 608px;
+}
+
+.project__title {
+    padding: 110px 0px 23px 0px;
+    margin: 0 auto;
+    width: calc(100% - 140px);
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.88px;
+    border-bottom: 1px solid #DADADA;
+}
+
+.project__info {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 140px);
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.project__block {
+    width: 550px;
+    padding: 70px 40px 0px 0px;
+}
+
+.project__block:last-child {
+    padding-right: 0px;
+}
+
+.project__subtitle {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.8px;
+    margin: 0;
+}
+
+.project__paragraph {
+    width: 550px;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding-top: 26px;
+    margin: 0;
+}
+
+.project__timeline {
+    width: 1140px;
+    display: flex;
+    width: calc(100% - 140px);
+    margin: 0 auto;
+    padding: 110px 0 14px 0;
+}
+
+.project__back {
+    width: 20%;
+    height: 36px;
+    background-color: #3DDC84;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project__front {
+    width: 80%;
+    height: 36px;
+    background-color: #303030;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project__time-back {
+    color: #000;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    padding: 9px 0 9px 0;
+}
+
+.project__time-front {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    padding: 9px 0 9px 0;
+}
+
+.project__name {
+    color: #8B8B8B;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px){
+    .project {
+        min-height: 585px;
+    }
+
+    .project__title {
+        padding: 90px 0px 23px 0px;
+        width: calc(100% - 100px);
+    }
+
+    .project__info {
+        width: calc(100% - 100px);
+    }
+
+    .project__subtitle {
+        width: 319px;
+    }    
+
+    .project__paragraph {
+        width: 319px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        padding-top: 22px;
+    }
+
+    .project__block {
+        padding: 70px 30px 0px 0px;
+    }
+
+    .project__timeline {
+        width: calc(100% - 100px);
+        padding: 93px 0 14px 0;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .project {
+        min-height: 641px;
+    }
+
+    .project__title {
+        padding: 70px 0px 28px 0px;
+        width: calc(100% - 36px);
+    }
+
+    .project__info {
+        width: calc(100% - 36px);
+        flex-direction: column;
+    }
+
+    .project__subtitle {
+        width: 284px;
+        font-size: 18px;
+        letter-spacing: -0.72px;
+    }    
+
+    .project__paragraph {
+        width: 284px;
+        font-size: 11px;
+        line-height: 16px;
+        padding-top: 16px;
+    }
+
+    .project__block {
+        width: 284px;
+        padding: 60px 0px 0px 0px;
+    }
+
+    .project__timeline {
+        width: calc(100% - 36px);
+        padding: 60px 0 10px 0;
+    }
+
+    .project__back {
+        width: 35%;
+    }
+
+    .project__front {
+        width: 65%;
+    }
+
+    .project__time-back {
+        font-size: 11px;
+        margin: 0;
+        padding: 11px 0 11px 0;
+    }
+
+    .project__time-front {
+        font-size: 11px;
+        padding: 11px 0 11px 0;
+    }
+
+    .project__name {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

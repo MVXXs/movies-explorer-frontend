@@ -1,0 +1,112 @@
+.navigation-menu {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 80%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+.navigation-menu__container {
+    width: 80%;
+    background-color: #202020;
+    padding: 159px 90px 90px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+.navigation-menu__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 340px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-menu__link {
+    padding-top: 28px;
+}
+
+.navigation-menu__links {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.navigation-menu__links_active {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-bottom: 2px solid #fff;
+}
+
+.navigation-menu__exit {
+    background-image: url(../../../images/navigation__menu_exit.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 22px;
+    right: 29px;
+}
+
+.navigation-menu__account {
+    display: flex;
+    width: 340px;
+    justify-content: center;
+}
+
+.navigation-menu__paragraph {
+    margin: 0;
+    padding-top: 2.5px;
+}
+
+.navigation-menu__icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #313131;
+    background-image: url(../../../images/navigation__account.svg);
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    object-fit: cover;
+    background-position: center;
+    border: none;
+    margin-left: 7px;
+}
+
+@media screen and (max-width: 367px) {
+    .navigation-menu {
+        width: 100%;
+    }
+
+    .navigation-menu__container {
+        width: 100%;
+        padding: 159px 10px 90px 10px;
+        align-items: baseline;
+    }
+}
