@@ -1,0 +1,33 @@
+.header {
+    background-color: #073042;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.header_movies {
+    background-color: transparent;
+}
+
+.header__wrapper {
+    padding: 18px 0 0 70px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px){
+    .header {
+        max-width: 768px;
+    }
+    
+    .header__wrapper {
+        padding: 18px 0 0 30px;
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .header__wrapper {
+        padding: 18px 0 0 14px;
+        max-width: 740px;
+    }
+}
