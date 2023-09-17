@@ -1,4 +1,4 @@
-export const BASE_URL = "https://auth.nomoreparties.co";
+export const BASE_URL = "http://api.mvxxs-movies.nomoreparties.co";
 
 function checkDataError(res) {
     if(res.ok) {
@@ -7,13 +7,13 @@ function checkDataError(res) {
     return Promise.reject(`Ошибка: ${res.status}`);
 }
 
-export const register = (password, email) => {
+export const register = (password, email, name) => {
     return fetch(`${BASE_URL}/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({password, email})
+      body: JSON.stringify({password, email, name})
     })
     .then((res) => checkDataError(res));
 }; 

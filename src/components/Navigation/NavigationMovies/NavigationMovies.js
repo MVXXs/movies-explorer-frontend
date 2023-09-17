@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import NavigationMenu from "../NavigationMenu/NavigationMenu";
 
 
-export default function NavigationMovies() {
+export default function NavigationMovies(props) {
     const [isMobile, setIsMobile] = useState(false);
 
     function handleOpenMenu() {

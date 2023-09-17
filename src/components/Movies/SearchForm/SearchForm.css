@@ -94,6 +94,19 @@
     transition: all .2s ease-in-out;
 }
 
+.search__error {
+    position: absolute;
+    top: 140px;
+    left: 15px;
+    color: #EE3465;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px){
     .search__form {
         width: calc(100% - 60px);

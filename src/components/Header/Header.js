@@ -4,7 +4,7 @@ import './Header.css';
 import Navigation from '../Navigation/Navigation';
 import { Link, useLocation } from "react-router-dom";
 
-export default function Header() {
+export default function Header(props) {
     const location = useLocation();
 
     return (
@@ -14,7 +14,7 @@ export default function Header() {
                     <img src={logo} className="header__logo" alt="логотип mvxxs movies" />
                 </Link>
             </div>
-            <Navigation />
+            <Navigation isLoggedIn={props.isLoggedIn}/>
         </header>
     )
 }

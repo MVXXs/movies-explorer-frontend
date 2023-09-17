@@ -60,11 +60,17 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    position: relative;
 }
 
 .login__saved:hover {
     cursor: pointer;
     opacity: .8;
+}
+
+.login__saved:disabled {
+    cursor: default;
+    opacity: .5;
 }
 
 .login__description {
@@ -85,6 +91,21 @@
 
 .login__link:hover {
     opacity: .7;
+}
+
+.login__error {
+    padding-top: 10px;
+    color: #EE3465;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login__error_server {
+    position: absolute;
+    top: 550px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px){

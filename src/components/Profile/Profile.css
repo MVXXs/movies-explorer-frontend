@@ -68,10 +68,16 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    position: relative;
 }
 
 .profile__saved:hover {
     cursor: pointer;
+}
+
+.profile__saved:disabled {
+    cursor: default;
+    opacity: .5;
 }
 
 .profile__exit {
@@ -83,6 +89,26 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+.profile__successful {
+    color: green;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.profile__error{
+    color: red;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 540px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px){
