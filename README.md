@@ -18,4 +18,4 @@ https://mvxxs-movies.nomoredomainsrocks.ru
 
 ## Ссылка на pull-request
 
-https://github.com/MVXXs/movies-explorer-frontend/pull/2
+ https://github.com/MVXXs/movies-explorer-frontend/pull/2  
