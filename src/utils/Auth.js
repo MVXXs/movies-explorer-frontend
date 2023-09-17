@@ -1,4 +1,4 @@
-export const BASE_URL = "http://api.mvxxs-movies.nomoreparties.co";
+export const BASE_URL = "https://api.mvxxs-movies.nomoreparties.co";
 
 function checkDataError(res) {
     if(res.ok) {
