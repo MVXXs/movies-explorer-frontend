@@ -7,7 +7,7 @@ import {
 } from '../../utils/constants';
 
 export default function SavedMovies(props) {
-    const [inputSearch, setValueSearch] = useState("");
+    const [inputSearch, setInputSearch] = useState("");
     const [shortMoviesSearch, setShortMoviesSearch] = useState([]);
     const [isCheck, setIsCheck] = useState(true);
 
@@ -41,7 +41,7 @@ export default function SavedMovies(props) {
 
     return (
         <main className="saved-movies">
-            <SearchForm valueSearch={inputSearch} setValueSearch={setValueSearch} filteredMovies={filteredSavedMovies} handleCheck={handleShortCheck}/>
+            <SearchForm valueSearch={inputSearch} setValueSearch={setInputSearch} filteredMovies={filteredSavedMovies} handleCheck={handleShortCheck}/>
             {shortMoviesSearch.length > 0 ? <MoviesCardList movies={shortMoviesSearch} onMovieDelete={props.onMovieDelete}/> : <p className="saved-movies__undefined">Ничего не найдено</p>}
         </main>
     )
