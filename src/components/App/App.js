@@ -16,7 +16,6 @@ import * as auth from '../../utils/Auth';
 import { apiMain } from '../../utils/MainApi';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
-
 function App() {
   const location = useLocation();
 
