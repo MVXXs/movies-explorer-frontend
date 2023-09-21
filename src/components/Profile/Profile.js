@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useEffect, useContext} from 'react';
 import './Profile.css';
 import { Link } from "react-router-dom";
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
@@ -18,6 +18,11 @@ export default function Profile(props) {
             email: currentUser.email,
         });
     }, [currentUser]);
+
+    useEffect(() => {
+        props.setErrorServer(false);
+        props.setIsOk(false);
+    }, [props.setErrorServer, props.setIsOk]);
 
     function handleSubmit(evt) {
         evt.preventDefault();

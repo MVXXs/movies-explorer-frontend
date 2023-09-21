@@ -148,7 +148,7 @@ function App() {
             <Route path='/' element={<Main loggedIn={loggedIn}/>} />
             <Route path='/movies' element={<ProtectedRoute element={Movies} loggedIn={loggedIn} movies={movies} isLoad={isLoading} onMovieSave={handleMovieSave} savedMovies={savedMovies} onMovieDelete={handleMovieDelete}/>} />
             <Route path='/saved-movies' element={<ProtectedRoute element={SavedMovies} loggedIn={loggedIn} movies={savedMovies} onMovieDelete={handleMovieDelete} />} />
-            <Route path='/profile' element={<ProtectedRoute element={Profile} loggedIn={loggedIn} email={email} name={name} signOut={signOut} onUpdateUser={handleUpdateUser} errorServer={error} isOk={infoTooltip} setIsOk={setInfoTooltip}/>} />
+            <Route path='/profile' element={<ProtectedRoute element={Profile} loggedIn={loggedIn} email={email} name={name} signOut={signOut} onUpdateUser={handleUpdateUser} errorServer={error} setErrorServer={setError} isOk={infoTooltip} setIsOk={setInfoTooltip}/>} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         { isFooter && <Footer />}
