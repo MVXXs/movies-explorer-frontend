@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import './Login.css';
 import logo from '../../images/logo.svg';
 import { Link } from "react-router-dom";
@@ -8,17 +8,15 @@ import { EMAIL_REGEX_VALIDATION } from '../../utils/regex';
 export default function Login(props) {
     const validate = useFormWithValidation();
 
-    const [error, setError] = useState('');
-
     function handleSubmit(evt) {
         evt.preventDefault();
-        if(props.errorServer){
-            setError('При авторизации произошла ошибка. Токен не передан или передан не в том формате')
-        } else {
-            setError('');
-        }
+
         props.onLogin(validate.values.password, validate.values.email);
     }
+
+    useEffect(() => {
+        props.setErrorServer(false);
+    }, [props.setErrorServer]);
 
     return (
         <section className="login">
@@ -35,7 +33,7 @@ export default function Login(props) {
                 <label className="login__label" htmlFor="password">Пароль</label>
                 <input className="login__input" type="password" name="password" placeholder="Пароль" minLength="6" maxLength="30" value={validate.values.password} onChange={validate.handleChange} required />
                 <span className="login__error">{validate.errors.password}</span>
-                <span className="login__error login__error_server">{error}</span>
+                {props.errorServer ? <span className="login__error login__error_server">При авторизации произошла ошибка. Токен не передан или передан не в том формате</span> : <span className="login__error login__error_server"></span>}
                 <button className="login__saved" type="submit" disabled={!validate.isValid}>Войти</button>
             </form>
             <p className="login__description">Ещё не зарегистрированы? <Link className="login__link" to="/sign-up">Регистрация</Link></p>

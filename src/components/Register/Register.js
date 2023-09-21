@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import './Register.css';
 import logo from '../../images/logo.svg';
 import { Link } from "react-router-dom";
@@ -7,18 +7,16 @@ import { EMAIL_REGEX_VALIDATION } from '../../utils/regex';
 
 export default function Register(props) {
     const validate = useFormWithValidation();
-    const [error, setError] = useState('');
 
     function handleSubmit(evt) {
         evt.preventDefault();
-        console.log(props.errorServer);
-        if (props.errorServer){
-            setError('При регистрации пользователя произошла ошибка')
-        } else {
-            setError('');
-        }
+
         props.onRegister(validate.values.password, validate.values.email, validate.values.name);
     }
+
+    useEffect(() => {
+        props.setErrorServer(false);
+    }, [props.setErrorServer]);
 
     return (
         <section className="register">
@@ -38,7 +36,7 @@ export default function Register(props) {
                 <label className="register__label" htmlFor="password">Пароль</label>
                 <input className="register__input" type="password" name="password" placeholder="Пароль" minLength="6" maxLength="30" value={validate.values.password} onChange={validate.handleChange} required />
                 <span className="register__error">{validate.errors.password}</span>
-                <span className="register__error register__error_server">{error}</span>
+                {props.errorServer ? <span className="register__error register__error_server">При регистрации пользователя произошла ошибка</span> : <span className="register__error register__error_server"></span>}
                 <button className="register__saved" type="submit" disabled={!validate.isValid}>Зарегистрироваться</button>
             </form>
             <p className="register__description">Уже зарегистрированы? <Link className="register__link" to="/sign-in">Войти</Link></p>

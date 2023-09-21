@@ -13,7 +13,6 @@ import NotFound from '../NotFound/NotFound';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
 import * as auth from '../../utils/Auth';
-import { apiMovies } from '../../utils/MoviesApi';
 import { apiMain } from '../../utils/MainApi';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
@@ -39,10 +38,9 @@ function App() {
   useEffect(() => {
     if(loggedIn){
       setIsLoading(true);
-    Promise.all([apiMovies.getInitialMovies(), apiMain.getUserInfo()])
+      apiMain.getUserInfo()
         .then((res) => {
-            setCurrentUser(res[1]);
-            setMovies([...res[0]]);
+            setCurrentUser(res);
         })
         .catch((err) => {
             console.log(`Ошибка: ${err}`);
@@ -67,8 +65,8 @@ function App() {
 
   function handleUpdateUser(item) {
       apiMain.editUserInfo(item).then((res) => {
-          setCurrentUser(res);
           setInfoTooltip(true);
+          setCurrentUser(res);
       })
       .catch(() => {
         setError(true);
@@ -146,12 +144,12 @@ function App() {
       <div className="page">
         { isHeader && <Header isLoggedIn={loggedIn}/>}
           <Routes>
-            <Route path='/sign-up' element={ loggedIn ? <Navigate to='/' /> :  <Register onRegister={handleRegister} errorServer={error}/>} />
-            <Route path='/sign-in' element={ loggedIn ? <Navigate to='/' /> : <Login onLogin={handleLogin} errorServer={error}/>} />
+            <Route path='/sign-up' element={ loggedIn ? <Navigate to='/' /> :  <Register onRegister={handleRegister} errorServer={error} setErrorServer={setError}/>} />
+            <Route path='/sign-in' element={ loggedIn ? <Navigate to='/' /> : <Login onLogin={handleLogin} errorServer={error} setErrorServer={setError}/>} />
             <Route path='/' element={<Main loggedIn={loggedIn}/>} />
             <Route path='/movies' element={<ProtectedRoute element={Movies} loggedIn={loggedIn} movies={movies} isLoad={isLoading} onMovieSave={handleMovieSave} savedMovies={savedMovies} onMovieDelete={handleMovieDelete}/>} />
             <Route path='/saved-movies' element={<ProtectedRoute element={SavedMovies} loggedIn={loggedIn} movies={savedMovies} onMovieDelete={handleMovieDelete} />} />
-            <Route path='/profile' element={<ProtectedRoute element={Profile} loggedIn={loggedIn} email={email} name={name} signOut={signOut} onUpdateUser={handleUpdateUser} errorServer={error} isOk={infoTooltip}/>} />
+            <Route path='/profile' element={<ProtectedRoute element={Profile} loggedIn={loggedIn} email={email} name={name} signOut={signOut} onUpdateUser={handleUpdateUser} errorServer={error} isOk={infoTooltip} setIsOk={setInfoTooltip}/>} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         { isFooter && <Footer />}

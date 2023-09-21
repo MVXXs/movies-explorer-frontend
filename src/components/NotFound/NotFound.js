@@ -11,7 +11,7 @@ export default function NotFound() {
                 <h2 className="undefined__title">404</h2>
                 <p className="undefined__subtitle">Страница не найдена</p>
             </div>
-            <Link className="undefined__link" onClick={() => navigate(-1)}>Назад</Link>
+            <Link className="undefined__link" onClick={() => navigate(-4)}>Назад</Link>
         </main>
     )
 }
