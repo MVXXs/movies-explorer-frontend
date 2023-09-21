@@ -2,7 +2,7 @@
 
 **Описание**
 
-LEVEL-3. MAKET - dark-3
+LEVEL-3. MAKET - dark-3.
 
 ***
 
